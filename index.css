@@ -1,0 +1,121 @@
+.nav_bar{
+    display: grid;
+    grid-template-rows: 80px;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px #aaaaaa;
+}
+.nav_bar_toggle{
+    grid-template-columns: auto auto 60px !important;
+}
+.nav_bar img{
+    margin-left: 15px;
+    height: 45px;
+}
+
+.collapse-block{
+    display: block;
+    transition: all 1s ease;
+    background-color: #fff;
+}
+
+.collapse-block ul{
+    list-style-type: none;
+}
+.collapse-block ul li{
+    float: left;   
+    margin: auto 10px;   
+}
+@media screen and (min-width:1199px) {
+    .collapse-block{
+        overflow: hidden;
+        height: 0;
+        width: 0;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .collapse-block{
+        overflow: hidden;
+        height: 0;
+        width: 0;
+    }
+    .toggle-box{
+        display: block !important;
+        margin-right: 0 !important;
+    }
+
+    .two-btn{
+        justify-self: end !important;
+    }
+
+    .nav_bar{
+        grid-template-columns: auto 0 auto 60px;
+    }
+
+    .nav_bar>img{
+        justify-self: start !important;
+    }
+}
+
+.nav_bar img{
+    justify-self: center;
+}
+
+.two-btn{
+    display: flex;
+    justify-self: end;
+}
+
+.toggle-box{
+    display: none;
+}
+
+.toggle-box{
+    margin-right: 15px;
+}
+
+button{
+    border: 0;
+    background: transparent;
+}
+
+button::after{
+    background-color: aqua;
+}
+
+#toggle {
+    width: 30px;
+    height: 30px;
+    padding: 1px 0  ;
+    border: 0;
+}
+  
+#toggle div {
+    width: 100%;
+    height: 2px;
+    background: black;
+    margin: 6px auto;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+.collapse-block-down{
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    margin-top: 0;
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid rgb(216, 216, 216);
+    height: 200px;
+}
+.collapse-block-down ul {
+    padding: 0 15px;
+}
+.collapse-block-down ul li {
+    float:none;
+    margin: 14px 0;
+}
